@@ -1,0 +1,20 @@
+//reset
+@import "./reset/vars";
+@import "./reset/font";
+@import "./reset/reset";
+@import "./reset/animations";
+
+//css grid
+@import "./reset/layout";
+
+@import "header";
+@import "principal";
+@import "grilla";
+@import "profile";
+@import "grid";
+@import "contact";
+@import "footer";
+
+//media queries
+@import "mq_tablet";
+@import "mq_mobile";

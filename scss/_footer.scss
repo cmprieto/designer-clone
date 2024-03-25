@@ -1,0 +1,43 @@
+/* FOOTER */
+.footer--container {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &--izq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--logo {
+      & > img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+    & > div > p {
+      margin: 10px;
+    }
+  }
+  &--der {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & > div {
+      margin: 10px;
+      & > a {
+        text-decoration: none;
+        color: $color-text;
+      }
+    }
+  }
+}
+/* ANIMACION ICONO FOOTER */
+.logo {
+  animation-name: rotarlogo;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

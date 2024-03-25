@@ -1,0 +1,43 @@
+.section--contact {
+  min-height: 60vh;
+  padding: 40px;
+  display: flex;
+  &--texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &1 > h1 {
+      font-size: $big-size;
+    }
+    &2 > h1 > a {
+      font-size: $big-size;
+      color: $color-greyDark;
+      text-decoration: none;
+      &:hover {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.section--contact--home {
+  @extend .section--contact;
+  min-height: 50vh;
+  padding: 40px;
+  &--texto {
+    @extend .section--contact--texto;
+    &1 > h1 {
+      font-size: $medium-size;
+    }
+    &2 > h1 > a {
+      color: $color-greyDark;
+      text-decoration: none;
+      font-size: $medium-size;
+      &:hover {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

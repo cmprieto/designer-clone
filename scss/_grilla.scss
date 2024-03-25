@@ -1,0 +1,86 @@
+/* GRILLA DE IMAGENES/VIDEO DE HOME */
+
+.section--grilla {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+  &--foto {
+    overflow: hidden;
+    flex: 1 0 200px;
+    display: flex;
+    align-items: center;
+    &1 {
+      @extend .section--grilla--foto;
+      & > img,
+      & > video {
+        /* max-height: $max-alto;
+        max-width: $max-ancho;
+         */
+        width: 95%;
+        height: auto;
+        position: relative;
+        border-radius: 12px;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+      }
+      &:hover {
+        overflow: hidden;
+        filter: grayscale(100%);
+      }
+    }
+    &2 {
+      @extend .section--grilla--foto;
+      & > img,
+      & > video {
+        width: 95%;
+        height: auto; /* 
+        max-height: $max-alto;
+        max-width: $max-ancho; */
+        position: relative;
+        border-radius: 12px;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+      }
+      &:hover {
+        overflow: hidden;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+/* ICONO QUE APARECE AL HACER HOVER EN IMAGEN O VIDEO -- SE PUEDE LINKEAR A OTRA PAGINA*/
+
+.section--grilla--icono {
+  &1 {
+    position: absolute;
+    font-size: 3rem;
+    color: $color-background;
+    top: 16px;
+    right: 32px;
+    opacity: 0;
+    border-radius: 100px;
+  }
+  &2 {
+    position: absolute;
+    font-size: 3rem;
+    color: $color-background;
+    top: 16px;
+    right: 32px;
+    opacity: 0;
+    border-radius: 100px;
+  }
+}
+.section--grilla--foto:hover .section--grilla--icono {
+  &1 {
+    opacity: 1;
+  }
+  &2 {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,78 @@
+/*MOVIL*/
+@media only screen and (max-width: 500px) {
+  .cabecera--contenedor--lista--boton {
+    padding: 6px 20px;
+    &--activo {
+      padding: 6px 20px;
+    }
+  }
+
+  .section--brand {
+    padding: 20px;
+    min-height: 40vh;
+
+    &--texto {
+      width: 100%;
+      & > h1 {
+        font-size: $small-size;
+      }
+    }
+
+    &--description {
+      & > div {
+        margin: 5px;
+        padding: 4px 8px;
+      }
+    }
+  }
+
+  .section--grilla {
+    flex-direction: column;
+    padding: 0 20px;
+    &--foto {
+      flex: 1 0 300px;
+    }
+  }
+
+  //profile
+  .profile {
+    min-height: 40vh;
+  }
+  .profile--text {
+    & > h1 {
+      font-size: $small-size;
+    }
+  }
+  .profile--about--text {
+    & > p {
+      font-size: 24px;
+    }
+  }
+  .grid-item {
+    max-width: 80%;
+  }
+  //contact
+  .section--contact {
+    padding: 20px;
+    &--texto {
+      &1 > h1 {
+        font-size: $small-size;
+      }
+      &2 > h1 > a {
+        font-size: $small-size;
+      }
+    }
+  }
+  .section--contact--home {
+    padding: 20px;
+    min-height: 30vh;
+    &--texto {
+      &1 > h1 {
+        font-size: $small-size;
+      }
+      &2 > h1 > a {
+        font-size: $small-size;
+      }
+    }
+  }
+}

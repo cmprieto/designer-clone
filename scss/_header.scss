@@ -1,0 +1,40 @@
+.cabecera {
+  padding: 30px 40px;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  &--contenedor {
+    padding: 4px;
+    background-color: $color-grey;
+    margin: 0 auto;
+    border-radius: 100px;
+    &--lista {
+      border-radius: 100px;
+      list-style-type: none;
+      backdrop-filter: blur(15px);
+      opacity: 1;
+      z-index: 5;
+      &--boton {
+        width: 100%;
+        border-radius: 100px;
+        color: $color-text;
+        padding: 12px 40px; //top and bottom 12 px, left&right 40px
+        &--activo {
+          color: $color-text;
+          width: 100%;
+          border-radius: 100px;
+          background-color: white;
+          padding: 12px 40px;
+          &:hover {
+            color: $color-text;
+          }
+        }
+        &:hover {
+          color: $color-text;
+        }
+      }
+    }
+  }
+}

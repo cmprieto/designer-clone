@@ -1,0 +1,23 @@
+/* CSS GRID PARA GRILLA DE LOGOTIPOS */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  max-width: 1400px;
+  overflow: hidden;
+  padding: 40px;
+  grid-gap: 30px;
+}
+.grid-item {
+  align-self: center;
+  justify-self: center;
+  background-color: black;
+  max-width: 50%;
+
+  & > img {
+    color: black;
+    max-width: 100%;
+  }
+}

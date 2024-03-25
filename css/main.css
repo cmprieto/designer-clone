@@ -1,0 +1,489 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../../assets/NeueMontreal-Medium.otf");
+}
+/* Reset  - Configuración básica de mis estilos*/
+* {
+  font-size: 14px;
+  font-family: "NeueMontreal", serif;
+  color: #000000;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@keyframes rotarlogo {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+/* PERSONALIZACION BOOTSTRAP */
+.container-fluid {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.cabecera {
+  padding: 30px 40px;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+.cabecera--contenedor {
+  padding: 4px;
+  background-color: rgba(232, 229, 228, 0.5019607843);
+  margin: 0 auto;
+  border-radius: 100px;
+}
+.cabecera--contenedor--lista {
+  border-radius: 100px;
+  list-style-type: none;
+  backdrop-filter: blur(15px);
+  opacity: 1;
+  z-index: 5;
+}
+.cabecera--contenedor--lista--boton {
+  width: 100%;
+  border-radius: 100px;
+  color: #000000;
+  padding: 12px 40px;
+}
+.cabecera--contenedor--lista--boton--activo {
+  color: #000000;
+  width: 100%;
+  border-radius: 100px;
+  background-color: white;
+  padding: 12px 40px;
+}
+.cabecera--contenedor--lista--boton--activo:hover {
+  color: #000000;
+}
+.cabecera--contenedor--lista--boton:hover {
+  color: #000000;
+}
+
+.section--brand {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.section--brand--texto {
+  width: 70%;
+}
+.section--brand--texto > h1 {
+  font-size: 72px;
+  text-align: center;
+  line-height: 1.2em;
+  letter-spacing: -0.2px;
+}
+.section--brand--description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section--brand--description > div {
+  background-color: rgba(232, 229, 228, 0.5019607843);
+  border-radius: 100px;
+  color: #000000;
+  padding: 8px 12px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section--brand--description > div:first-child {
+  background-color: white;
+}
+.section--brand--description > div > p {
+  margin: 0;
+}
+
+/* GRILLA DE IMAGENES/VIDEO DE HOME */
+.section--grilla {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.section--grilla--foto, .section--grilla--foto2, .section--grilla--foto1 {
+  overflow: hidden;
+  flex: 1 0 200px;
+  display: flex;
+  align-items: center;
+}
+.section--grilla--foto1 > img, .section--grilla--foto1 > video {
+  /* max-height: $max-alto;
+  max-width: $max-ancho;
+   */
+  width: 95%;
+  height: auto;
+  position: relative;
+  border-radius: 12px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+.section--grilla--foto1:hover {
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+.section--grilla--foto2 > img, .section--grilla--foto2 > video {
+  width: 95%;
+  height: auto; /* 
+max-height: $max-alto;
+max-width: $max-ancho; */
+  position: relative;
+  border-radius: 12px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+.section--grilla--foto2:hover {
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+/* ICONO QUE APARECE AL HACER HOVER EN IMAGEN O VIDEO -- SE PUEDE LINKEAR A OTRA PAGINA*/
+.section--grilla--icono1 {
+  position: absolute;
+  font-size: 3rem;
+  color: #ffffff;
+  top: 16px;
+  right: 32px;
+  opacity: 0;
+  border-radius: 100px;
+}
+.section--grilla--icono2 {
+  position: absolute;
+  font-size: 3rem;
+  color: #ffffff;
+  top: 16px;
+  right: 32px;
+  opacity: 0;
+  border-radius: 100px;
+}
+
+.section--grilla--foto:hover .section--grilla--icono1, .section--grilla--foto1:hover .section--grilla--icono1, .section--grilla--foto2:hover .section--grilla--icono1 {
+  opacity: 1;
+}
+.section--grilla--foto:hover .section--grilla--icono2, .section--grilla--foto1:hover .section--grilla--icono2, .section--grilla--foto2:hover .section--grilla--icono2 {
+  opacity: 1;
+}
+
+.profile {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+}
+.profile--text {
+  width: 50%;
+}
+.profile--text > h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+.profile--pictures {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  gap: 20px;
+  max-width: 1400px;
+  overflow: hidden;
+}
+.profile--pictures--oli {
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.profile--pictures--studio {
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.profile--about {
+  min-height: 30vh;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.profile--about--about {
+  background-color: rgba(232, 229, 228, 0.5019607843);
+  border-radius: 100px;
+  color: #000000;
+  padding: 8px 12px;
+  margin: 0 10px;
+}
+.profile--about--about > p {
+  margin: 0;
+}
+.profile--about--text {
+  max-width: 700px;
+}
+.profile--about--text > p {
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.2em;
+  letter-spacing: -0.2px;
+}
+
+.profile--clients {
+  min-height: 20vh;
+  /*  padding: 140px 40px; */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile--clients--clients {
+  background-color: rgba(232, 229, 228, 0.5019607843);
+  border-radius: 100px;
+  color: #000000;
+  padding: 8px 12px;
+  margin: 0 10px;
+}
+.profile--clients--clients > p {
+  margin: 0;
+}
+.profile--clients--text {
+  max-width: 700px;
+}
+.profile--clients--text > p {
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.2em;
+  letter-spacing: -0.2px;
+}
+
+/* CSS GRID PARA GRILLA DE LOGOTIPOS */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  max-width: 1400px;
+  overflow: hidden;
+  padding: 40px;
+  grid-gap: 30px;
+}
+
+.grid-item {
+  align-self: center;
+  justify-self: center;
+  background-color: black;
+  max-width: 50%;
+}
+.grid-item > img {
+  color: black;
+  max-width: 100%;
+}
+
+.section--contact, .section--contact--home {
+  min-height: 60vh;
+  padding: 40px;
+  display: flex;
+}
+.section--contact--texto, .section--contact--home--texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.section--contact--texto1 > h1 {
+  font-size: 72px;
+}
+.section--contact--texto2 > h1 > a {
+  font-size: 72px;
+  color: #7f7f7f;
+  text-decoration: none;
+}
+.section--contact--texto2 > h1 > a:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.section--contact--home {
+  min-height: 50vh;
+  padding: 40px;
+}
+.section--contact--home--texto1 > h1 {
+  font-size: 48px;
+}
+.section--contact--home--texto2 > h1 > a {
+  color: #7f7f7f;
+  text-decoration: none;
+  font-size: 48px;
+}
+.section--contact--home--texto2 > h1 > a:hover {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
+.footer--container {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer--container--izq {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer--container--izq--logo > img {
+  height: 40px;
+  width: 40px;
+}
+.footer--container--izq > div > p {
+  margin: 10px;
+}
+.footer--container--der {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer--container--der > div {
+  margin: 10px;
+}
+.footer--container--der > div > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* ANIMACION ICONO FOOTER */
+.logo {
+  animation-name: rotarlogo;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/*TABLET*/
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  .section--brand {
+    padding: 20px;
+  }
+  .section--brand--texto {
+    width: 80%;
+  }
+  .section--brand--texto > h1 {
+    font-size: 36px;
+  }
+  .section--brand--description > div {
+    margin: 5px;
+  }
+  .section--grilla {
+    flex-direction: column;
+    padding: 0px 20px;
+  }
+  .section--grilla--foto, .section--grilla--foto1, .section--grilla--foto2 {
+    flex: 1 0 auto;
+    margin: 10px;
+  }
+  .profile--text > h1 {
+    font-size: 36px;
+  }
+  .profile--about--text > p {
+    font-size: 24px;
+  }
+  .grid-item {
+    max-width: 70%;
+  }
+  .section--contact--texto1 > h1 {
+    font-size: 48px;
+  }
+  .section--contact--texto2 > h1 > a {
+    font-size: 48px;
+  }
+  .section--contact--home--texto1 > h1 {
+    font-size: 48px;
+  }
+  .section--contact--home--texto2 > h1 > a {
+    font-size: 48px;
+  }
+}
+/*MOVIL*/
+@media only screen and (max-width: 500px) {
+  .cabecera--contenedor--lista--boton {
+    padding: 6px 20px;
+  }
+  .cabecera--contenedor--lista--boton--activo {
+    padding: 6px 20px;
+  }
+  .section--brand {
+    padding: 20px;
+    min-height: 40vh;
+  }
+  .section--brand--texto {
+    width: 100%;
+  }
+  .section--brand--texto > h1 {
+    font-size: 36px;
+  }
+  .section--brand--description > div {
+    margin: 5px;
+    padding: 4px 8px;
+  }
+  .section--grilla {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .section--grilla--foto, .section--grilla--foto1, .section--grilla--foto2 {
+    flex: 1 0 300px;
+  }
+  .profile {
+    min-height: 40vh;
+  }
+  .profile--text > h1 {
+    font-size: 36px;
+  }
+  .profile--about--text > p {
+    font-size: 24px;
+  }
+  .grid-item {
+    max-width: 80%;
+  }
+  .section--contact, .section--contact--home {
+    padding: 20px;
+  }
+  .section--contact--texto1 > h1 {
+    font-size: 36px;
+  }
+  .section--contact--texto2 > h1 > a {
+    font-size: 36px;
+  }
+  .section--contact--home {
+    padding: 20px;
+    min-height: 30vh;
+  }
+  .section--contact--home--texto1 > h1 {
+    font-size: 36px;
+  }
+  .section--contact--home--texto2 > h1 > a {
+    font-size: 36px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,38 @@
+.section--brand {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  &--texto {
+    width: 70%;
+    & > h1 {
+      font-size: $big-size;
+      text-align: center;
+      line-height: 1.2em;
+      letter-spacing: -0.2px;
+    }
+  }
+  &--description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      background-color: $color-grey;
+      border-radius: 100px;
+      color: $color-text;
+      padding: 8px 12px;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:first-child {
+        background-color: white;
+      }
+      & > p {
+        margin: 0;
+      }
+    }
+  }
+}

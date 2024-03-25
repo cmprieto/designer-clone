@@ -1,0 +1,9 @@
+/* Reset  - Configuración básica de mis estilos*/
+* {
+  font-size: 14px;
+  font-family: $project-font;
+  color: $color-text;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
