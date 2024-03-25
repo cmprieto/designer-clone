@@ -33,7 +33,12 @@
       flex: 1 0 300px;
     }
   }
-
+  .section--grilla--icono {
+    &1,
+    &2 {
+      top: 60px;
+    }
+  }
   //profile
   .profile {
     min-height: 40vh;
@@ -49,7 +54,7 @@
     }
   }
   .grid-item {
-    max-width: 80%;
+    max-width: 100%;
   }
   //contact
   .section--contact {

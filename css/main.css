@@ -292,8 +292,7 @@ max-width: $max-ancho; */
 .grid-item {
   align-self: center;
   justify-self: center;
-  background-color: black;
-  max-width: 50%;
+  max-width: 60%;
 }
 .grid-item > img {
   color: black;
@@ -410,7 +409,7 @@ max-width: $max-ancho; */
     font-size: 24px;
   }
   .grid-item {
-    max-width: 70%;
+    max-width: 100%;
   }
   .section--contact--texto1 > h1 {
     font-size: 48px;
@@ -454,6 +453,9 @@ max-width: $max-ancho; */
   .section--grilla--foto, .section--grilla--foto1, .section--grilla--foto2 {
     flex: 1 0 300px;
   }
+  .section--grilla--icono1, .section--grilla--icono2 {
+    top: 60px;
+  }
   .profile {
     min-height: 40vh;
   }
@@ -464,7 +466,7 @@ max-width: $max-ancho; */
     font-size: 24px;
   }
   .grid-item {
-    max-width: 80%;
+    max-width: 100%;
   }
   .section--contact, .section--contact--home {
     padding: 0px;
