@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "NeueMontreal";
-  src: url("../../assets/NeueMontreal-Medium.otf");
+  /*  src: url("../../assets/NeueMontreal-Medium.otf"); */
+  src: url("../assets/NeueMontreal-Medium.otf");
 }
 /* Reset  - Configuración básica de mis estilos*/
 * {
@@ -466,7 +467,7 @@ max-width: $max-ancho; */
     max-width: 80%;
   }
   .section--contact, .section--contact--home {
-    padding: 20px;
+    padding: 0px;
   }
   .section--contact--texto1 > h1 {
     font-size: 36px;
@@ -475,7 +476,7 @@ max-width: $max-ancho; */
     font-size: 36px;
   }
   .section--contact--home {
-    padding: 20px;
+    padding: 0px;
     min-height: 30vh;
   }
   .section--contact--home--texto1 > h1 {
@@ -483,6 +484,10 @@ max-width: $max-ancho; */
   }
   .section--contact--home--texto2 > h1 > a {
     font-size: 36px;
+  }
+  .footer--container {
+    flex-direction: column;
+    padding: 20px;
   }
 }
 

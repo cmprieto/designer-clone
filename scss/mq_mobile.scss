@@ -53,7 +53,7 @@
   }
   //contact
   .section--contact {
-    padding: 20px;
+    padding: 0px;
     &--texto {
       &1 > h1 {
         font-size: $small-size;
@@ -64,7 +64,7 @@
     }
   }
   .section--contact--home {
-    padding: 20px;
+    padding: 0px;
     min-height: 30vh;
     &--texto {
       &1 > h1 {
@@ -74,5 +74,10 @@
         font-size: $small-size;
       }
     }
+  }
+
+  .footer--container {
+    flex-direction: column;
+    padding: 20px;
   }
 }
